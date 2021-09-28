@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -46,18 +47,18 @@ ul.tabs li a{
     background: #fff;
 }
 
-.secciones article{
+.secciones form{
     padding: 30px;
 }
 
-article{
+form{
     display: flex;
     flex-direction: column;
     padding: 0 10px;
     background-color: #BDECB6;
 }
 
-article input{
+form input{
     margin: 10px 0;
     height: 30px;
 }

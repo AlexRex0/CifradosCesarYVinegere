@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="estilos.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
+    <script src="validacion.js"></script>
+    <script src="cesar.js"></script>
+    <script src="vinegere.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -19,18 +22,22 @@
         </ul>
         <div class="tabs-container">
             <article id="tab1">
-                <input type="text" size="15" name="texto1" placeholder="Ingrese el texto a cifrar">
-                <input type="text" size="15" name="clave1" placeholder="Ingrese la clave para el cifrado Cesar">
-                <input type="button" value="Cifrar" class="boton">
-                <input type="button" value="Descifrar" class="boton">
+                <form name="datosCesar">
+                <input type="text" size="15" name="texto1" placeholder="Ingrese el texto a cifrar" onkeypress="return validarm(event)">
+                <input type="text" size="15" name="clave1" placeholder="Ingrese la clave para el cifrado Cesar" onkeypress="return validarn(event)">
+                <input type="button" value="Cifrar" class="boton" onclick="return cifrarCesar('abcdefghijklmnopqrstuvwxyz')">
+                <input type="button" value="Descifrar" class="boton" onclick="return cifrarCesar('zyxwvutsrqponmlkjihgfedcba')">
                 <input type="text" size="15" name="respuesta1" readonly>
+                </form>
             </article>
             <article id="tab2">
-                <input type="text" size="15" name="texto2" placeholder="Ingrese el texto a cifrar">
-                <input type="text" size="15" name="clave2" placeholder="Ingrese la clave para el cifrado Vinegere">
-                <input type="button" value="Cifrar" class="boton">
-                <input type="button" value="Descifrar" class="boton">
+                <form name="datosVinegere">
+                <input type="text" size="15" name="texto2" placeholder="Ingrese el texto a cifrar" onkeypress="return validarm(event)">
+                <input type="text" size="15" name="clave2" placeholder="Ingrese la clave para el cifrado Vinegere" onkeypress="return claveVinegere(event)">
+                <input type="button" value="Cifrar" class="boton" onclick="return cifrarVinegere('abcdefghijklmnopqrstuvwxyz')">
+                <input type="button" value="Descifrar" class="boton" onclick="return descifrarVinegere('abcdefghijklmnopqrstuvwxyz')">
                 <input type="text" size="15" name="respuesta2" readonly>
+                </form>
             </article>
         </div>
     </div>
