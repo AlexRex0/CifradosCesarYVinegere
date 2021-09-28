@@ -51,7 +51,9 @@ function descifrarVinegere(abecedario){
             if(texto[i] == ' '){
                 ans+= ' ';
             }else{
-                ans+= abecedario[(abecedario.indexOf(texto[i]) - abecedario.indexOf(clave[indClave])) % 26];
+                let aux = (abecedario.indexOf(texto[i]) - abecedario.indexOf(clave[indClave])) + 26;
+                aux%=26;
+                ans+= abecedario[aux];
                 indClave+=1;
                 if(indClave == clave.length){
                     indClave = 0;
